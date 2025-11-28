@@ -31,7 +31,7 @@ export default function Profile() {
                 <CardContent className="p-8 text-center">
                   <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center overflow-hidden">
                     <img
-                      src="/hero-bg.jpg"
+                      src="/profile.png"
                       alt="迫口竜士"
                       className="w-full h-full object-cover"
                     />
