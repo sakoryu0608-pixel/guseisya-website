@@ -243,8 +243,12 @@ export default function Profile() {
                   <Button>Amazonで詳細を見る</Button>
                 </a>
               </div>
-              <div className="bg-muted h-64 md:h-full flex items-center justify-center">
-                <BookOpen size={120} className="text-muted-foreground" />
+              <div className="bg-muted h-64 md:h-full flex items-center justify-center overflow-hidden">
+                <img
+                  src="/book-cover.png"
+                  alt="GPTs構築の教科書"
+                  className="w-full h-full object-contain p-4"
+                />
               </div>
             </div>
           </Card>

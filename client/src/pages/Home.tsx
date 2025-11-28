@@ -239,8 +239,12 @@ export default function Home() {
                   </Button>
                 </a>
               </div>
-              <div className="bg-muted h-64 md:h-96 flex items-center justify-center">
-                <BookOpen size={120} className="text-muted-foreground" />
+              <div className="bg-muted h-64 md:h-96 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/book-cover.png"
+                  alt="GPTs構築の教科書"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </Card>
