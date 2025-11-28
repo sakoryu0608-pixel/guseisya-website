@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
@@ -15,6 +22,7 @@ export default function Contact() {
     company: "",
     email: "",
     phone: "",
+    inquiryType: "",
     message: "",
   });
 
@@ -32,6 +40,7 @@ export default function Contact() {
       company: "",
       email: "",
       phone: "",
+      inquiryType: "",
       message: "",
     });
   };
@@ -179,6 +188,29 @@ export default function Contact() {
                           placeholder="090-1234-5678"
                         />
                       </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="inquiryType">
+                        お問い合わせ種別 <span className="text-destructive">*</span>
+                      </Label>
+                      <Select
+                        value={formData.inquiryType}
+                        onValueChange={(value) =>
+                          setFormData({ ...formData, inquiryType: value })
+                        }
+                        required
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="選択してください" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="service">サービスに関するお問い合わせ</SelectItem>
+                          <SelectItem value="consultation">無料相談のお申し込み</SelectItem>
+                          <SelectItem value="partner">パートナー募集について</SelectItem>
+                          <SelectItem value="other">その他</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div className="space-y-2">

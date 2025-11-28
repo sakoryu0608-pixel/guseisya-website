@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import InstagramEmbed from "@/components/InstagramEmbed";
 import { ArrowRight, BookOpen, Brain, Lightbulb, Sparkles, Target, Users } from "lucide-react";
 import { Link } from "wouter";
 
@@ -25,11 +26,11 @@ export default function Home() {
 
         <div className="container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-shadow">
               経営者のための<br />
               生成AIコンサルタント
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-95">
+            <p className="text-xl md:text-2xl mb-8 opacity-95 text-shadow">
               あなたの会社のポテンシャルを最大化
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -97,7 +98,7 @@ export default function Home() {
           </p>
 
           <div className="space-y-12">
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden card-elevated">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <div className="flex items-center mb-4">
@@ -119,7 +120,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden card-elevated">
               <div className="grid md:grid-cols-2 gap-0">
                 <div
                   className="h-64 md:h-auto bg-cover bg-center order-2 md:order-1"
@@ -141,7 +142,7 @@ export default function Home() {
               </div>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden card-elevated">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <div className="flex items-center mb-4">
@@ -173,7 +174,7 @@ export default function Home() {
             主なサービス
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="card-elevated">
               <CardContent className="p-8">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-6">
                   <Brain size={32} />
@@ -191,7 +192,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="card-elevated">
               <CardContent className="p-8">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-6">
                   <Lightbulb size={32} />
@@ -250,6 +251,9 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      {/* Instagram Section */}
+      <InstagramEmbed />
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
