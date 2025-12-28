@@ -26,16 +26,16 @@ export default function Home() {
 
         <div className="container relative z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-shadow">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-shadow">
               経営者のための<br />
               生成AIコンサルタント
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-95 text-shadow">
+            <p className="text-lg md:text-2xl mb-8 opacity-95 text-shadow">
               あなたの会社のポテンシャルを最大化
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link href="/services">
-                <Button size="lg" variant="secondary" className="text-lg">
+                <Button size="lg" variant="secondary" className="text-lg w-full sm:w-auto">
                   サービスを見る
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
@@ -44,7 +44,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg bg-white/10 border-white text-white hover:bg-white hover:text-primary"
+                  className="text-lg bg-white/10 border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto"
                 >
                   無料相談はこちら
                 </Button>
@@ -283,7 +283,7 @@ export default function Home() {
             お気軽にお問い合わせください。3営業日以内にご返信いたします。
           </p>
           <Link href="/contact">
-            <Button size="lg" variant="secondary" className="text-lg">
+            <Button size="lg" variant="secondary" className="text-lg w-full sm:w-auto">
               無料相談を申し込む
               <ArrowRight className="ml-2" size={20} />
             </Button>

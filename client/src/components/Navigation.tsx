@@ -19,10 +19,10 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border shadow-md">
       <div className="container">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <Link href="/">
             <a className="flex items-center space-x-2">
-              <img src="/logo.png" alt="株式会社偶成舎" className="h-16 w-auto" />
+              <img src="/logo-new.png" alt="株式会社偶成舎" className="h-12 md:h-16 w-auto object-contain" />
             </a>
           </Link>
 

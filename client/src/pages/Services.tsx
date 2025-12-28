@@ -36,7 +36,7 @@ export default function Services() {
                   <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-4">
                     <Bot size={32} />
                   </div>
-                  <h2 className="text-3xl font-bold">小規模システム・AIBOT開発</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">小規模システム・AIBOT開発</h2>
                 </div>
 
                 <div className="space-y-6">
@@ -112,7 +112,7 @@ export default function Services() {
                   <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-4">
                     <GraduationCap size={32} />
                   </div>
-                  <h2 className="text-3xl font-bold">生成AIコンサルタント養成講座</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">生成AIコンサルタント養成講座</h2>
                 </div>
 
                 <div className="space-y-6">
@@ -227,7 +227,7 @@ export default function Services() {
                   <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-4">
                     <Users size={32} />
                   </div>
-                  <h2 className="text-3xl font-bold">経営の「右腕」として、AIと業務設計を実装する。サブスク型AI顧問</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">経営の「右腕」として、AIと業務設計を実装する。<br className="md:hidden" />サブスク型AI顧問</h2>
                 </div>
 
                 <div className="space-y-6">

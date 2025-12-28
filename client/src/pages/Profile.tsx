@@ -26,7 +26,7 @@ export default function Profile() {
       <section className="py-20">
         <div className="container max-w-5xl">
           <div className="grid md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-4 flex flex-col items-center text-center">
+            <div className="md:col-span-4 flex flex-col items-center text-center mb-8 md:mb-0">
               <div className="w-64 h-64 rounded-full bg-muted flex items-center justify-center overflow-hidden mb-6 shadow-xl border-4 border-white">
                 <img
                   src="/profile.png"
@@ -127,9 +127,9 @@ export default function Profile() {
           <div className="max-w-4xl mx-auto space-y-16">
             
             {/* Mission */}
-            <div className="md:pl-12 border-l-4 border-white/30 pl-6">
+            <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
               <div className="flex items-baseline mb-4">
-                <h2 className="text-4xl font-bold tracking-wider mr-4">MISSION</h2>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">MISSION</h2>
                 <span className="text-white/80 text-sm tracking-widest">私たちの使命</span>
               </div>
               <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
@@ -139,9 +139,9 @@ export default function Profile() {
             </div>
 
             {/* Vision */}
-            <div className="md:pl-12 border-l-4 border-white/30 pl-6">
+            <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
               <div className="flex items-baseline mb-4">
-                <h2 className="text-4xl font-bold tracking-wider mr-4">VISION</h2>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">VISION</h2>
                 <span className="text-white/80 text-sm tracking-widest">私たちの目指す未来</span>
               </div>
               <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
@@ -151,7 +151,7 @@ export default function Profile() {
             </div>
 
             {/* Value & Slogan Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
                 <div className="flex items-center mb-4">
                   <BookOpen className="mr-3" size={24} />
