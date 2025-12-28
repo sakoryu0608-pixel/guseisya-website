@@ -233,7 +233,7 @@ export default function Profile() {
       <section className="relative py-32 overflow-hidden">
         {/* Background Image/Gradient */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-600 to-blue-400">
-          <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] opacity-20 bg-cover bg-center mix-blend-overlay"></div>
+          {/* Image removed per user request */}
         </div>
 
         <div className="container relative z-10 text-white">
