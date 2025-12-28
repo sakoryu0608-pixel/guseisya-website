@@ -22,7 +22,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           <Link href="/">
             <a className="flex items-center space-x-2">
-              <img src="/logo-new.png" alt="株式会社偶成舎" className="h-12 md:h-16 w-auto object-contain" />
+              <img src="/logo-v2.png" alt="株式会社偶成舎" className="h-12 md:h-16 w-auto object-contain" />
             </a>
           </Link>
 

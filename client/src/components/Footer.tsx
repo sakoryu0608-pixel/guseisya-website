@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="mb-4">
-              <img src="/logo-new.png" alt="株式会社偶成舎" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/logo-v2.png" alt="株式会社偶成舎" className="h-16 md:h-20 w-auto object-contain" />
             </div>
             <p className="text-sm opacity-90 mb-4">
               「働く」を「働楽」に変える生成AIコンサルティング
