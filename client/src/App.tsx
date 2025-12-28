@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import LoadingScreen from "@/components/LoadingScreen";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
@@ -41,6 +42,7 @@ function App() {
         // switchable
       >
         <TooltipProvider>
+          <LoadingScreen />
           <Toaster />
           <Router />
         </TooltipProvider>

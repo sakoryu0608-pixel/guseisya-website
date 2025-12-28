@@ -67,49 +67,162 @@ export default function Profile() {
         <div className="container max-w-4xl">
           <h2 className="text-3xl font-bold text-center mb-16">経歴と専門分野</h2>
           
-          <div className="relative border-l-2 border-primary/30 ml-4 md:ml-0 space-y-12">
-            <div className="relative pl-8 md:pl-0">
-              <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
-              <div className="md:grid md:grid-cols-12 md:gap-8">
-                <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
-                  <span className="text-primary font-bold text-lg">SNS運用時代</span>
+          <div className="space-y-16">
+            {/* 経歴 */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8 flex items-center">
+                <Briefcase className="mr-3 text-primary" />
+                経歴
+              </h3>
+              <div className="relative border-l-2 border-primary/30 ml-4 md:ml-0 space-y-12">
+                <div className="relative pl-8 md:pl-0">
+                  <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
+                  <div className="md:grid md:grid-cols-12 md:gap-8">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                      <span className="text-primary font-bold text-lg">映像クリエイター</span>
+                    </div>
+                    <div className="md:col-span-9">
+                      <p className="text-muted-foreground">
+                        2年近く企業のPVや広告、SNS動画の編集を実施。
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="md:col-span-9">
-                  <h3 className="text-xl font-bold mb-2">SNS運用からAIコンサルへ</h3>
-                  <p className="text-muted-foreground">
-                    約3年間のSNS運用代行の経験を経て、2022年11月のChatGPT公開を機にAI分野へ転身。それ以前はAIの知識がゼロでしたが、毎日の実践を通じて専門性を構築しました。
-                  </p>
+
+                <div className="relative pl-8 md:pl-0">
+                  <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
+                  <div className="md:grid md:grid-cols-12 md:gap-8">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                      <span className="text-primary font-bold text-lg">SNS運用代行時代</span>
+                    </div>
+                    <div className="md:col-span-9">
+                      <p className="text-muted-foreground">
+                        約3年間にわたり、SNS運用代行事業に従事。飲食店、工務店、車ディーラーなど、実店舗や地域ビジネスに特化したInstagramやTikTokの運用、セミナー開催を行い、集客とブランディングを支援。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative pl-8 md:pl-0">
+                  <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
+                  <div className="md:grid md:grid-cols-12 md:gap-8">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                      <span className="text-primary font-bold text-lg">AIコンサルタントへの転身</span>
+                    </div>
+                    <div className="md:col-span-9">
+                      <p className="text-muted-foreground">
+                        2022年11月のChatGPT公開を機に、AI分野へ注力。それまでAIに関しては素人であった経験を活かし、「初心者目線」での導入支援を強みとする。以来、毎日ChatGPTを使用し続け、AI導入支援やシステム開発を行っている。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative pl-8 md:pl-0">
+                  <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
+                  <div className="md:grid md:grid-cols-12 md:gap-8">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                      <span className="text-primary font-bold text-lg">現在</span>
+                    </div>
+                    <div className="md:col-span-9">
+                      <p className="text-muted-foreground">
+                        株式会社偶成舎の代表として、中小企業から個人事業主まで業種問わず幅広いクライアントに対し、AI導入・DX支援・人材育成を展開。2025年4月には書籍『GPTs構築の教科書』を出版。
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative pl-8 md:pl-0">
-              <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
-              <div className="md:grid md:grid-cols-12 md:gap-8">
-                <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
-                  <span className="text-primary font-bold text-lg">AI専門家として</span>
-                </div>
-                <div className="md:col-span-9">
-                  <h3 className="text-xl font-bold mb-2">GPTs構築の専門家</h3>
-                  <p className="text-muted-foreground">
-                    50以上のGPTs構築実績を持ち、依頼者様専用のGPTs構築（カスタムChatGPT）を提供。ルーティンとなっているクライアントワーク業務や事務的なルーティン業務を代行する専門のGPTsを構築し、質の担保と作業時短を実現します。
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* 専門分野 */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8 flex items-center">
+                <Target className="mr-3 text-primary" />
+                専門分野
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mr-3 text-primary">
+                        <span className="font-bold">1</span>
+                      </div>
+                      <h4 className="text-lg font-bold">生成AI導入・システム開発支援</h4>
+                    </div>
+                    <ul className="space-y-3 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">AIチャットボット構築:</strong> クライアントのルーティン業務や事務作業を代行する専用GPTsを構築。実績は50件以上にのぼる。</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">プロンプトエンジニアリング:</strong> 5,000回以上の試行錯誤から得た知見に基づき、理想の回答を引き出すための最適な指示（プロンプト）設計を行う。</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">GAS構築:</strong> SNS分析ツールや業務効率化システムの構築</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
 
-            <div className="relative pl-8 md:pl-0">
-              <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
-              <div className="md:grid md:grid-cols-12 md:gap-8">
-                <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
-                  <span className="text-primary font-bold text-lg">現在</span>
-                </div>
-                <div className="md:col-span-9">
-                  <h3 className="text-xl font-bold mb-2">幅広い支援実績</h3>
-                  <p className="text-muted-foreground">
-                    法人へのAI導入支援、クライアントの業務の言語化などをサポート。toC向けサービスも展開しており、GPTsの構築方法やAIを活用した業務効率化、コンサルなども行なっています。
-                  </p>
-                </div>
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mr-3 text-primary">
+                        <span className="font-bold">2</span>
+                      </div>
+                      <h4 className="text-lg font-bold">業務DX・効率化コンサルティング</h4>
+                    </div>
+                    <ul className="space-y-3 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">業務や課題、経営の「言語化」:</strong> クライアント自身も曖昧な業務課題をヒアリングで明確化し、やりたいことを言語化する。</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">ツール導入・環境構築:</strong> AI導入にとどまらず、業務に必要なツールの導入、業務フロー全体を最適化する。</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mr-3 text-primary">
+                        <span className="font-bold">3</span>
+                      </div>
+                      <h4 className="text-lg font-bold">AI人材育成・教育研修</h4>
+                    </div>
+                    <ul className="space-y-3 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">企業研修・セミナー:</strong> 数名から数十名規模のAIセミナーを多数開催。専門用語を避けた「自分ごと」として学べる実践的な内容に定評がある。</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span><strong className="text-foreground">構築指導:</strong> 60名以上に対してAI活用や導入を指導し、AI人材の育成に貢献。</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mr-3 text-primary">
+                        <span className="font-bold">4</span>
+                      </div>
+                      <h4 className="text-lg font-bold">デジタルマーケティング知見</h4>
+                    </div>
+                    <ul className="space-y-3 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span>過去のSNS運用（Instagram, TikTok）で培った「魅せる」ノウハウと最新トレンドへのキャッチアップ能力を活かし、AIを活用したマーケティング戦略立案もサポート。</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
