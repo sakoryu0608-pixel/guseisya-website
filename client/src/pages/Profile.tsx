@@ -232,8 +232,11 @@ export default function Profile() {
       {/* Vision/Mission/Value Section - Blue Sky Design */}
       <section className="relative py-32 overflow-hidden">
         {/* Background Image/Gradient */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-600 to-blue-400">
-          {/* Image removed per user request */}
+        <div className="absolute inset-0 z-0">
+          {/* Sky Image */}
+          <div className="absolute inset-0 bg-[url('/vision-sky.jpg')] bg-cover bg-center"></div>
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-blue-900/70 mix-blend-multiply"></div>
         </div>
 
         <div className="container relative z-10 text-white">
