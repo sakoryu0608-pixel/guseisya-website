@@ -40,15 +40,19 @@ export default function Home() {
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
-              <Link href="/contact">
+              <a
+                href="https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="lg"
                   variant="outline"
                   className="text-lg bg-white/10 border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto"
                 >
-                  無料相談はこちら
+                  お問い合わせはこちら
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -277,17 +281,21 @@ export default function Home() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            まずは無料相談から始めませんか？
+            まずはお気軽にお問い合わせください
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            お気軽にお問い合わせください。3営業日以内にご返信いたします。
+            3営業日以内にご返信いたします。
           </p>
-          <Link href="/contact">
+          <a
+            href="https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="lg" variant="secondary" className="text-lg w-full sm:w-auto">
-              無料相談を申し込む
+              お問い合わせはこちら
               <ArrowRight className="ml-2" size={20} />
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 

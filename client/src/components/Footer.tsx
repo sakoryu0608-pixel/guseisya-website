@@ -55,9 +55,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="hover:opacity-80 transition-opacity">お問い合わせ</a>
-                </Link>
+                <a
+                  href="https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  お問い合わせ
+                </a>
               </li>
             </ul>
           </div>

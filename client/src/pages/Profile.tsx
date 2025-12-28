@@ -226,14 +226,18 @@ export default function Profile() {
             一緒に「働楽」を実現しませんか？
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            まずは無料相談でお話しましょう
+            まずはお気軽にお問い合わせください
           </p>
-          <Link href="/contact">
+          <a
+            href="https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button size="lg" variant="secondary" className="text-lg">
-              無料相談を申し込む
+              お問い合わせはこちら
               <ArrowRight className="ml-2" size={20} />
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 

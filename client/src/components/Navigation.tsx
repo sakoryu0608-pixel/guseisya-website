@@ -13,7 +13,7 @@ export default function Navigation() {
     { href: "/case-studies", label: "実績・導入事例" },
     { href: "/profile", label: "プロフィール" },
     { href: "/faq", label: "よくある質問" },
-    { href: "/contact", label: "お問い合わせ" },
+    { href: "https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc", label: "お問い合わせ", external: true },
   ];
 
   return (
@@ -29,17 +29,29 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
+              item.external ? (
                 <a
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                    location === item.href
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-secondary"
-                  }`}
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-md text-sm font-medium transition-colors text-foreground hover:bg-secondary"
                 >
                   {item.label}
                 </a>
-              </Link>
+              ) : (
+                <Link key={item.href} href={item.href}>
+                  <a
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      location === item.href
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                </Link>
+              )
             ))}
           </div>
 
@@ -57,18 +69,31 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden py-4 space-y-2">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
+              item.external ? (
                 <a
-                  className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                    location === item.href
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-secondary"
-                  }`}
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 rounded-md text-sm font-medium transition-colors text-foreground hover:bg-secondary"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </a>
-              </Link>
+              ) : (
+                <Link key={item.href} href={item.href}>
+                  <a
+                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      location === item.href
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground hover:bg-secondary"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                </Link>
+              )
             ))}
           </div>
         )}
