@@ -14,14 +14,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url(/hero-new.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          className="absolute inset-0 z-0 bg-[url('/hero-new.png')] bg-cover bg-[70%_center] md:bg-center"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
+          {/* Mobile-optimized overlay: Darker on mobile to ensure text readability, lighter on desktop */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90 md:bg-gradient-to-r md:from-primary/90 md:to-primary/70" />
         </div>
 
         <div className="container relative z-10 text-white">
