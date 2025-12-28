@@ -78,7 +78,7 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">映像クリエイター</span>
                     </div>
                     <div className="md:col-span-9">
@@ -92,7 +92,7 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">SNS運用代行時代</span>
                     </div>
                     <div className="md:col-span-9">
@@ -106,7 +106,7 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">AIコンサルタントへの転身</span>
                     </div>
                     <div className="md:col-span-9">
@@ -120,7 +120,7 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0">
+                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">現在</span>
                     </div>
                     <div className="md:col-span-9">
@@ -239,50 +239,51 @@ export default function Profile() {
         <div className="container relative z-10 text-white">
           <div className="max-w-4xl mx-auto space-y-16">
             
-            {/* Mission */}
-            <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
-              <div className="flex items-baseline mb-4">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">MISSION</h2>
-                <span className="text-white/80 text-sm tracking-widest">私たちの使命</span>
-              </div>
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
-                私たちは、未だ光の当てられていない社会課題に果敢に挑み、<br className="hidden md:block" />
-                革新的な解決アクションを実行することで、誰もが希望を持てる社会の実現に貢献します。
-              </p>
-            </div>
-
             {/* Vision */}
             <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
               <div className="flex items-baseline mb-4">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">VISION</h2>
-                <span className="text-white/80 text-sm tracking-widest">私たちの目指す未来</span>
+                <span className="text-white/80 text-sm tracking-widest">実現したい未来</span>
               </div>
               <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
-                社会の「頂」を目指し、あらゆる課題が解決され、<br className="hidden md:block" />
-                全ての人がその可能性を最大限に発揮できる、持続可能で希望に満ちた未来を創造する。
+                仕事の無駄をなくし、「働く」を「働楽」にすること。
               </p>
             </div>
 
-            {/* Value & Slogan Grid */}
+            {/* Slogan */}
+            <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
+              <div className="flex items-baseline mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">SLOGAN</h2>
+                <span className="text-white/80 text-sm tracking-widest">ブランドの合言葉</span>
+              </div>
+              <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
+                デジタルの困った解決します！
+              </p>
+            </div>
+
+            {/* Mission & Value Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
                 <div className="flex items-center mb-4">
-                  <BookOpen className="mr-3" size={24} />
-                  <h3 className="text-xl font-bold">VALUE</h3>
+                  <Target className="mr-3" size={24} />
+                  <h3 className="text-xl font-bold">MISSION</h3>
+                  <span className="ml-2 text-sm text-white/70">企業の存在意義</span>
                 </div>
-                <p className="text-white/90 leading-relaxed">
-                  言えない「不」に寄り添う永遠の相方。<br />
-                  絶えず改善し続ける、変化に適応し柔軟な思考と行動を促進する。
+                <p className="text-white/90 leading-relaxed text-lg">
+                  顧客の“やりたい”を共に創ること。
                 </p>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
                 <div className="flex items-center mb-4">
-                  <Lightbulb className="mr-3" size={24} />
-                  <h3 className="text-xl font-bold">SLOGAN</h3>
+                  <BookOpen className="mr-3" size={24} />
+                  <h3 className="text-xl font-bold">VALUE</h3>
+                  <span className="ml-2 text-sm text-white/70">約束する価値</span>
                 </div>
-                <p className="text-white/90 leading-relaxed text-lg font-medium">
-                  デジタルの困った解決します！
+                <p className="text-white/90 leading-relaxed">
+                  言えない「不」に寄り添う永遠の相方、<br />
+                  絶えず改善し続ける、<br />
+                  変化に適応し柔軟な思考と行動を促進する。
                 </p>
               </div>
             </div>
