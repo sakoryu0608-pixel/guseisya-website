@@ -229,66 +229,15 @@ export default function Profile() {
         </div>
       </section>
 
-      {/* Vision/Mission/Value Section - Blue Sky Design */}
-      <section className="relative py-32 overflow-hidden">
-        {/* Background Image/Gradient */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-600 to-blue-400">
-          <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] opacity-20 bg-cover bg-center mix-blend-overlay"></div>
-        </div>
-
-        <div className="container relative z-10 text-white">
-          <div className="max-w-4xl mx-auto space-y-16">
-            
-            {/* Vision */}
-            <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
-              <div className="flex items-baseline mb-4">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">VISION</h2>
-                <span className="text-white/80 text-sm tracking-widest">実現したい未来</span>
-              </div>
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
-                仕事の無駄をなくし、「働く」を「働楽」にすること。
-              </p>
-            </div>
-
-            {/* Slogan */}
-            <div className="md:pl-12 border-l-4 border-white/30 pl-6 mb-8 md:mb-0">
-              <div className="flex items-baseline mb-4">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-wider mr-4">SLOGAN</h2>
-                <span className="text-white/80 text-sm tracking-widest">ブランドの合言葉</span>
-              </div>
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
-                デジタルの困った解決します！
-              </p>
-            </div>
-
-            {/* Mission & Value Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-                <div className="flex items-center mb-4">
-                  <Target className="mr-3" size={24} />
-                  <h3 className="text-xl font-bold">MISSION</h3>
-                  <span className="ml-2 text-sm text-white/70">企業の存在意義</span>
-                </div>
-                <p className="text-white/90 leading-relaxed text-lg">
-                  顧客の“やりたい”を共に創ること。
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-                <div className="flex items-center mb-4">
-                  <BookOpen className="mr-3" size={24} />
-                  <h3 className="text-xl font-bold">VALUE</h3>
-                  <span className="ml-2 text-sm text-white/70">約束する価値</span>
-                </div>
-                <p className="text-white/90 leading-relaxed">
-                  言えない「不」に寄り添う永遠の相方、<br />
-                  絶えず改善し続ける、<br />
-                  変化に適応し柔軟な思考と行動を促進する。
-                </p>
-              </div>
-            </div>
-
-          </div>
+      {/* Vision/Mission/Value Section - Image Only */}
+      <section className="relative w-full">
+        {/* Background Image Container - Maintains aspect ratio or covers area */}
+        <div className="w-full">
+          <img 
+            src="/hero-bg.jpg" 
+            alt="Vision Mission Value" 
+            className="w-full h-auto object-cover"
+          />
         </div>
       </section>
 
