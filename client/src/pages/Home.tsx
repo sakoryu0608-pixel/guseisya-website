@@ -209,6 +209,24 @@ export default function Home() {
                 </Link>
               </CardContent>
             </Card>
+
+            <Card className="card-elevated md:col-span-2">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-6">
+                  <Users size={32} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">サブスク型AI顧問</h3>
+                <p className="text-muted-foreground mb-6">
+                  AIはもちろんのこと、その他の「業務設計サポート・事業相談・経営者の言語化サポート」など幅広く伴奏型で長期的にご支援させていただきます。
+                </p>
+                <Link href="/services">
+                  <Button variant="outline">
+                    詳しく見る
+                    <ArrowRight className="ml-2" size={16} />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

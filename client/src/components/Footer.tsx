@@ -7,7 +7,9 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">株式会社偶成舎</h3>
+            <div className="mb-4">
+              <img src="/logo.png" alt="株式会社偶成舎" className="h-12 w-auto brightness-0 invert" />
+            </div>
             <p className="text-sm opacity-90 mb-4">
               「働く」を「働楽」に変える生成AIコンサルティング
             </p>

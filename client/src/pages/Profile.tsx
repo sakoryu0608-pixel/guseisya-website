@@ -233,7 +233,7 @@ export default function Profile() {
                   『GPTs構築の教科書』
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  2025年4月出版予定。GPTsを基礎から応用までステップ形式で学べる内容です。業務を全てGPTs化し、セルフブラック企業を1ヶ月で卒業した実践的ノウハウを凝縮しています。
+                  2025年4月出版。GPTsを基礎から応用までステップ形式で学べる内容です。業務を全てGPTs化し、セルフブラック企業を1ヶ月で卒業した実践的ノウハウを凝縮。
                 </p>
                 <a
                   href="https://amzn.asia/d/elDjFDJ"

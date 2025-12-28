@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import { ArrowRight, Bot, Brain, CheckCircle, GraduationCap } from "lucide-react";
+import { ArrowRight, Bot, Brain, CheckCircle, GraduationCap, Users } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Services() {
@@ -196,6 +196,97 @@ export default function Services() {
                 className="h-64 md:h-auto bg-cover bg-center order-1 md:order-2"
                 style={{ backgroundImage: "url(/service-education.jpg)" }}
               />
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Service 3: Subscription AI Advisor */}
+      <section className="py-20">
+        <div className="container">
+          <Card className="overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div
+                className="h-64 md:h-auto bg-cover bg-center"
+                style={{ backgroundImage: "url(/consultation.jpg)" }}
+              />
+              <div className="p-8 md:p-12">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-4">
+                    <Users size={32} />
+                  </div>
+                  <h2 className="text-3xl font-bold">サブスク型AI顧問</h2>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">こんな課題をお持ちの方に</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <CheckCircle className="mr-2 mt-1 text-accent flex-shrink-0" size={20} />
+                        <span>継続的にAI活用の相談をしたい</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="mr-2 mt-1 text-accent flex-shrink-0" size={20} />
+                        <span>経営の壁打ち相手が欲しい</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="mr-2 mt-1 text-accent flex-shrink-0" size={20} />
+                        <span>業務設計や言語化のサポートをしてほしい</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">サービス内容</h3>
+                    <p className="text-muted-foreground mb-4">
+                      AIはもちろんのこと、その他の「業務設計サポート・事業相談・経営者の言語化サポート」など幅広く伴奏型で長期的にご支援させていただきます。
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <CheckCircle className="mr-2 mt-1 text-primary flex-shrink-0" size={20} />
+                        <span><strong>定期ミーティング:</strong> 月1回〜</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="mr-2 mt-1 text-primary flex-shrink-0" size={20} />
+                        <span><strong>チャット相談:</strong> 無制限</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="mr-2 mt-1 text-primary flex-shrink-0" size={20} />
+                        <span><strong>最新AI情報提供:</strong> 随時</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">ご契約の流れ</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {["ご相談受付", "ヒアリング", "プラン提案", "契約", "支援開始"].map((step, index) => (
+                        <div key={index} className="flex items-center">
+                          <span className="px-3 py-1 bg-secondary rounded-full text-sm font-medium">
+                            {step}
+                          </span>
+                          {index < 4 && <ArrowRight className="mx-2 text-muted-foreground" size={16} />}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">料金プラン</h3>
+                    <p className="text-muted-foreground">
+                      月額制（支援内容・頻度により異なります）
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">契約形態</h3>
+                    <span className="inline-block px-4 py-2 bg-accent text-accent-foreground rounded-md font-medium">
+                      月額顧問契約
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </Card>
         </div>
