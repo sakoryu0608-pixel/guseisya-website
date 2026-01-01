@@ -204,10 +204,13 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div
-                className="h-64 md:h-auto bg-cover bg-center order-1 md:order-2"
-                style={{ backgroundImage: "url(/service-education-new.png)" }}
-              />
+              <div className="h-64 md:h-auto bg-white flex items-center justify-center order-1 md:order-2 p-4">
+                <img 
+                  src="/service-education-new.png" 
+                  alt="生成AIコンサルタント養成講座" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </Card>
         </div>
