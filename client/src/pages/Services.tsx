@@ -206,7 +206,7 @@ export default function Services() {
               </div>
               <div className="h-64 md:h-auto bg-white flex items-center justify-center order-1 md:order-2 p-4">
                 <img 
-                  src="/service-education-new.png" 
+                  src="/service-education-v2.png" 
                   alt="生成AIコンサルタント養成講座" 
                   className="w-full h-full object-contain"
                 />

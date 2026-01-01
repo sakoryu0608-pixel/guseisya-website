@@ -78,10 +78,10 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
+                    <div className="md:col-span-4 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">映像クリエイター</span>
                     </div>
-                    <div className="md:col-span-9">
+                    <div className="md:col-span-8">
                       <p className="text-muted-foreground">
                         2年近く企業のPVや広告、SNS動画の編集を実施。
                       </p>
@@ -92,10 +92,10 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
+                    <div className="md:col-span-4 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">SNS運用代行時代</span>
                     </div>
-                    <div className="md:col-span-9">
+                    <div className="md:col-span-8">
                       <p className="text-muted-foreground">
                         約3年間にわたり、SNS運用代行事業に従事。飲食店、工務店、車ディーラーなど、実店舗や地域ビジネスに特化したInstagramやTikTokの運用、セミナー開催を行い、集客とブランディングを支援。
                       </p>
@@ -106,10 +106,10 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
+                    <div className="md:col-span-4 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">AIコンサルタントへの転身</span>
                     </div>
-                    <div className="md:col-span-9">
+                    <div className="md:col-span-8">
                       <p className="text-muted-foreground">
                         2022年11月のChatGPT公開を機に、AI分野へ注力。それまでAIに関しては素人であった経験を活かし、「初心者目線」での導入支援を強みとする。以来、毎日ChatGPTを使用し続け、AI導入支援やシステム開発を行っている。
                       </p>
@@ -120,10 +120,10 @@ export default function Profile() {
                 <div className="relative pl-8 md:pl-0">
                   <div className="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
                   <div className="md:grid md:grid-cols-12 md:gap-8">
-                    <div className="md:col-span-3 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
+                    <div className="md:col-span-4 md:text-right mb-2 md:mb-0 pl-4 md:pl-0">
                       <span className="text-primary font-bold text-lg">現在</span>
                     </div>
-                    <div className="md:col-span-9">
+                    <div className="md:col-span-8">
                       <p className="text-muted-foreground">
                         株式会社偶成舎の代表として、中小企業から個人事業主まで業種問わず幅広いクライアントに対し、AI導入・DX支援・人材育成を展開。2025年4月には書籍『GPTs構築の教科書』を出版。
                       </p>
