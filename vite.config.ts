@@ -9,6 +9,8 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
+  // GitHub Pagesでサブパス配信する際のbase URL
+  base: process.env.GITHUB_PAGES === "true" ? "/guseisya-website/" : "/",
   plugins,
   resolve: {
     alias: {

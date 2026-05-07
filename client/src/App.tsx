@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import LoadingScreen from "@/components/LoadingScreen";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -38,6 +38,9 @@ function Router() {
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
+// GitHub Pagesのサブパス配信に対応するため、import.meta.env.BASE_URLからbase pathを動的に取得
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function App() {
   return (
     <ErrorBoundary>
@@ -48,7 +51,9 @@ function App() {
         <TooltipProvider>
           <LoadingScreen />
           <Toaster />
-          <Router />
+          <WouterRouter base={basePath}>
+            <Router />
+          </WouterRouter>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
