@@ -104,3 +104,9 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Playwright MCP screenshots
+.playwright-mcp/
+.DS_Store
+codex/
+

@@ -8,6 +8,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import CaseStudies from "./pages/CaseStudies";
+import Voice from "./pages/Voice";
+import Philosophy from "./pages/Philosophy";
 import Profile from "./pages/Profile";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -19,6 +21,8 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/services"} component={Services} />
       <Route path={"/case-studies"} component={CaseStudies} />
+      <Route path={"/voice"} component={Voice} />
+      <Route path={"/philosophy"} component={Philosophy} />
       <Route path={"/profile"} component={Profile} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/contact"} component={Contact} />

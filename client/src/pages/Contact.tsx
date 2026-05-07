@@ -1,250 +1,171 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import { Mail, Phone } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { TriangleLarge, CircleLine } from "@/components/TriangleDecoration";
+import { ArrowRight, FileText, Mail, MessageSquare, Phone, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.15 } },
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    inquiryType: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // フォーム送信のロジック（実際の実装では、バックエンドAPIに送信する）
-    console.log("Form submitted:", formData);
-    
-    toast.success("お問い合わせを受け付けました。3営業日以内にご返信いたします。");
-    
-    // フォームをリセット
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      inquiryType: "",
-      message: "",
-    });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary to-background">
-        <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">
-            お問い合わせ
-          </h1>
-          <p className="text-xl text-center text-muted-foreground max-w-3xl mx-auto">
-            お気軽にご相談ください。3営業日以内にご返信いたします。
-          </p>
+      {/* ヒーローセクション - フル幅背景画像 */}
+      <section className="relative pt-32 pb-24 min-h-[40vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="/contact-hero.jpg" alt="" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--blue-main)]/85 to-[var(--blue-light)]/70" />
+        </div>
+        <TriangleLarge className="top-10 right-[8%]" color="rgba(255,255,255,0.1)" opacity={1} />
+
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="font-en text-6xl md:text-8xl font-bold tracking-[0.12em] text-white mb-4">CONTACT</h1>
+            <p className="text-lg font-bold text-white">お問い合わせ / 資料請求</p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-12">
-            {/* Contact Information */}
-            <div className="md:col-span-1 space-y-6">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">お問い合わせ先</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <Phone className="mr-3 mt-1 text-primary flex-shrink-0" size={20} />
-                      <div>
-                        <p className="font-semibold mb-1">電話</p>
-                        <p className="text-muted-foreground">080-2724-9394</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <Mail className="mr-3 mt-1 text-primary flex-shrink-0" size={20} />
-                      <div>
-                        <p className="font-semibold mb-1">メール</p>
-                        <p className="text-muted-foreground break-all">
-                          sakoryu0608@gmail.com
-                        </p>
-                      </div>
-                    </div>
+      {/* お問い合わせ・資料請求カード */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute top-0 right-[-17%] z-0 w-[60%] h-full bg-[var(--blue-pale2)] transform skew-x-[-28deg]" />
+        <CircleLine className="top-10 right-[5%]" opacity={0.06} />
+
+        <div className="container max-w-4xl relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={stagger}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {/* お問い合わせ */}
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full border-none card-elevated bg-white">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="w-16 h-16 rounded-full bg-[var(--blue-pale)] flex items-center justify-center mb-6">
+                    <MessageSquare size={28} className="text-[var(--blue-main)]" />
                   </div>
+                  <h2 className="text-xl font-bold mb-4">お問い合わせ</h2>
+                  <p className="text-muted-foreground text-sm mb-8 flex-1 leading-relaxed">
+                    サービスに関するご質問、無料相談のお申し込みなど、お気軽にお問い合わせください。
+                  </p>
+                  <a
+                    href="https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="btn-main w-full text-sm">
+                      お問い合わせフォームへ
+                      <ArrowRight size={16} />
+                    </button>
+                  </a>
                 </CardContent>
               </Card>
+            </motion.div>
 
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">営業時間</h3>
-                  <p className="text-muted-foreground">
-                    平日 9:00 - 18:00
-                    <br />
-                    （土日祝日は休業）
+            {/* 資料請求 */}
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full border-none card-elevated bg-white">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="w-16 h-16 rounded-full bg-[var(--blue-pale)] flex items-center justify-center mb-6">
+                    <FileText size={28} className="text-[var(--blue-main)]" />
+                  </div>
+                  <h2 className="text-xl font-bold mb-4">資料請求</h2>
+                  <p className="text-muted-foreground text-sm mb-8 flex-1 leading-relaxed">
+                    サービスの詳細資料をお送りいたします。導入をご検討中の方はぜひご請求ください。
                   </p>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    ※お問い合わせは24時間受け付けております。
-                    <br />
-                    ※3営業日以内にご返信いたします。
-                  </p>
+                  <a
+                    href="https://gsgqynvzjuht.sg.larksuite.com/share/base/form/shrlgpKpa9jY7KyB1gTFpP1hRtc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="btn-main w-full text-sm !bg-white !text-[var(--dark)] border border-[var(--dark)] hover:!bg-[var(--dark)] hover:!text-white">
+                      資料請求フォームへ
+                      <ArrowRight size={16} />
+                    </button>
+                  </a>
                 </CardContent>
               </Card>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
-              <Card className="bg-accent text-accent-foreground">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">無料相談実施中</h3>
-                  <p className="text-sm">
+      {/* 連絡先情報 */}
+      <section className="relative py-24 bg-gradient-blue overflow-hidden">
+        <TriangleLarge className="top-16 left-[3%]" opacity={0.04} />
+
+        <div className="container max-w-4xl relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeInUp} className="mb-12">
+              <div className="ttl-line">
+                <h2 className="section-ttl-en">INFO</h2>
+                <span className="section-ttl-sub font-bold">連絡先情報</span>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div variants={fadeInUp}>
+                <Card className="text-center border-none card-elevated bg-white">
+                  <CardContent className="p-6">
+                    <Phone size={24} className="text-[var(--blue-main)] mx-auto mb-3" />
+                    <h3 className="font-bold text-sm mb-2">電話</h3>
+                    <p className="text-muted-foreground text-sm">080-2724-9394</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+              <motion.div variants={fadeInUp}>
+                <Card className="text-center border-none card-elevated bg-white">
+                  <CardContent className="p-6">
+                    <Mail size={24} className="text-[var(--blue-main)] mx-auto mb-3" />
+                    <h3 className="font-bold text-sm mb-2">メール</h3>
+                    <p className="text-muted-foreground text-sm break-all">sakoryu0608@gmail.com</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+              <motion.div variants={fadeInUp}>
+                <Card className="text-center border-none card-elevated bg-white">
+                  <CardContent className="p-6">
+                    <Clock size={24} className="text-[var(--blue-main)] mx-auto mb-3" />
+                    <h3 className="font-bold text-sm mb-2">営業時間</h3>
+                    <p className="text-muted-foreground text-sm">平日 9:00 - 18:00</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+
+            {/* 無料相談バナー */}
+            <motion.div variants={fadeInUp} className="mt-10">
+              <div className="relative overflow-hidden rounded-lg" style={{ background: "linear-gradient(145deg, var(--blue-main), var(--blue-light))" }}>
+                <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rotate-45 translate-x-1/3 -translate-y-1/3" />
+                <div className="p-8 text-center text-white relative z-10">
+                  <h3 className="text-xl font-bold mb-3">無料相談実施中</h3>
+                  <p className="text-sm opacity-90 max-w-lg mx-auto">
                     初回のご相談は無料です。お客様の課題やご要望をお聞きし、最適なソリューションをご提案いたします。
                   </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Form */}
-            <div className="md:col-span-2">
-              <Card>
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">
-                    お問い合わせフォーム
-                  </h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">
-                          お名前 <span className="text-destructive">*</span>
-                        </Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          placeholder="山田 太郎"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="company">会社名</Label>
-                        <Input
-                          id="company"
-                          name="company"
-                          value={formData.company}
-                          onChange={handleChange}
-                          placeholder="株式会社〇〇"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="email">
-                          メールアドレス <span className="text-destructive">*</span>
-                        </Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          placeholder="example@example.com"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">電話番号</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="090-1234-5678"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="inquiryType">
-                        お問い合わせ種別 <span className="text-destructive">*</span>
-                      </Label>
-                      <Select
-                        value={formData.inquiryType}
-                        onValueChange={(value) =>
-                          setFormData({ ...formData, inquiryType: value })
-                        }
-                        required
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="選択してください" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="service">サービスに関するお問い合わせ</SelectItem>
-                          <SelectItem value="consultation">無料相談のお申し込み</SelectItem>
-                          <SelectItem value="partner">パートナー募集について</SelectItem>
-                          <SelectItem value="other">その他</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">
-                        お問い合わせ内容 <span className="text-destructive">*</span>
-                      </Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={8}
-                        placeholder="お問い合わせ内容をご記入ください"
-                      />
-                    </div>
-
-                    <div className="bg-secondary p-4 rounded-md text-sm">
-                      <p className="mb-2">
-                        <strong>個人情報の取り扱いについて</strong>
-                      </p>
-                      <p className="text-muted-foreground">
-                        お預かりした個人情報は、お問い合わせへの回答および弊社サービスのご案内にのみ使用し、第三者に開示することはございません。
-                      </p>
-                    </div>
-
-                    <Button type="submit" size="lg" className="w-full">
-                      送信する
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
